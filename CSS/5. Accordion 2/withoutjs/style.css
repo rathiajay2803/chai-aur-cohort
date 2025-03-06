@@ -1,0 +1,114 @@
+/*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+/* 
+      MAIN COLOR: #087f5b
+      GREY COLOR: #343a40
+      */
+
+:root {
+  --main-color: #087f5b;
+  --grey-color: #343a40;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #343a40;
+  line-height: 1;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.accordion {
+  width: 700px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  padding: 1.5rem;
+  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 24px;
+  row-gap: 32px;
+  align-items: center;
+}
+.accor-number,
+.accor-heading {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.accor-number {
+  color: #ced4da;
+}
+
+.accor-heading {
+  color: var(--grey-color);
+}
+
+/* .open {
+  border-top: 4px solid var(--main-color);
+}
+
+.open .accor-number,
+.open .accor-heading {
+  color: var(--main-color);
+}
+
+.open .accor-description {
+  display: block;
+} */
+
+#down-icon {
+  position: absolute;
+  display: none;
+}
+
+.accor-opening-icon {
+  width: 24px;
+  height: 24px;
+  stroke: var(--main-color);
+}
+
+.icon-label {
+  cursor: pointer;
+}
+
+.accor-description {
+  grid-column: 2;
+  /* display: none; */
+
+  height: 0;
+  overflow: hidden;
+  transition: all 0.8s ease;
+}
+
+.accor-description > p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.accor-description > ui {
+  color: #868e96;
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.icon-label:checked ~ .accor-description {
+  height: auto;
+}

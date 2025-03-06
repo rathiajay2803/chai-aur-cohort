@@ -1,0 +1,174 @@
+/* Challenge CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+body::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('./assets/chaigym.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #333333;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 4rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.logo img {
+  border-radius: 50%;
+}
+
+.nav-links {
+  margin-right: 5rem;
+  display: flex;
+  /* align-items: center; */
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #fff;
+  font-size: 1.2rem;
+  display: block;
+  text-decoration: none;
+  transition: border-bottom 0.3s ease, font-weight 0.3s ease, transform 0.3 ease,
+    color 0.3s ease;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid #ff7902;
+  font-weight: 500;
+  transform: scale(1.05);
+  color: #ff7902;
+}
+
+/* Hero section styles */
+.hero {
+  width: 90%;
+  text-align: center;
+  margin: 4rem auto;
+}
+
+.hero-content {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.hero-content p {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: #ff7902;
+  border: none;
+  border-radius: 15px;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #ff7700;
+  color: white;
+  transform: translateX(3px) scale(1.01);
+}
+
+.cta-button:hover::after {
+  content: '⏩';
+  margin-left: 0.5rem;
+  transition: margin-left 0.3s ease;
+}
+
+/* Features section styles */
+.features {
+  width: 95%;
+  margin: 0px auto;
+  min-height: auto;
+  padding: 3rem;
+  background-image: linear-gradient(
+    45deg,
+    #0a0908ff,
+    #030302ff,
+    #050504ff,
+    #070605ff,
+    #070706ff
+  );
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.feature {
+  border: 2px solid #ff7902;
+  padding: 2rem;
+  min-width: 300px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px) scale(1.01);
+  opacity: 0.8;
+  box-shadow: 0px 0px 4px rgba(255, 121, 2);
+}
+
+.feature h3 {
+  color: #ff7902;
+}
+
+.feature p {
+  color: #fff;
+  font-size: 1.1rem;
+}

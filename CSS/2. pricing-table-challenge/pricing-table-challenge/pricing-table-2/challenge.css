@@ -1,0 +1,209 @@
+/* Challenge CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+}
+
+.container {
+  width: 1200px;
+  margin: 0px auto;
+}
+
+.header {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #ff6b6b;
+}
+
+.subtitle {
+  color: #848484;
+  text-shadow: 0px 0px 2px rgba(107, 107, 107, 0.1);
+}
+
+.pricing-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  max-width: 950px;
+  margin: 3rem auto;
+  gap: 3rem;
+}
+
+.pricing-card {
+  padding: 1.2rem;
+  border: 2px solid red;
+  text-align: center;
+  border-radius: 15px;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  transition: transform 0.3s ease, border 0.3 ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-15px) scale(1.01);
+}
+
+.card-header {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.popular-tag {
+  padding: 0.5rem 1rem;
+  background-color: #ffd93d;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000;
+  border: none;
+  border-radius: 25px;
+  position: absolute;
+  left: 50%;
+  top: -5%;
+  transform: translateX(-50%);
+}
+
+.price-block {
+  padding: 1rem 2rem;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.beginner .price-block {
+  background: rgba(48, 48, 48, 0.7);
+  /* -webkit-backdrop-filter: contrast(40%); */
+}
+
+.warrior .price-block {
+  background: rgba(60, 45, 45, 0.7);
+  /* -webkit-backdrop-filter: contrast(40%); */
+}
+
+.champion .price-block {
+  background: rgba(60, 56, 41, 0.7);
+  /* -webkit-backdrop-filter: contrast(40%); */
+}
+
+.price {
+  color: #ff6b6b;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.period {
+  text-transform: uppercase;
+  color: #848484;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5rem;
+}
+
+.features li {
+  list-style-type: none;
+}
+
+.features li.disabled {
+  color: #666666;
+}
+
+.join-btn {
+  padding: 1rem 2rem;
+  background-color: transparent;
+  border: 1px solid #ff6b6b;
+  border-radius: 10px;
+  color: #ff6b6b;
+  font-weight: bolder;
+  width: 80%;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(255, 107, 107, 0.01);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease, color 0.3s ease;
+}
+
+.join-btn:hover {
+  transform: translateY(-5px);
+  background-color: #ff6b6b;
+  color: #fff;
+  box-shadow: 2px 2px 4px rgba(255, 107, 107, 0.15);
+}
+
+.beginner {
+  border: 1px solid rgba(60, 60, 60, 0.05);
+  background-color: #262626;
+}
+
+.beginner:hover {
+  border: 1px solid rgba(60, 60, 60, 0.15);
+}
+
+.popular-tag {
+  border: 1px solid #ff6b6b;
+}
+
+/* Custom Class Modifiers */
+.warrior {
+  background-color: #312222;
+  position: relative;
+}
+
+.champion {
+  background-color: #312d1d;
+}
+
+.champion .price {
+  color: #ffd93d;
+}
+
+.champion .join-btn {
+  position: relative;
+  z-index: 1;
+}
+
+.champion .join-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(0);
+  background: linear-gradient(45deg, #2c5282, #3182ce);
+  border-radius: 10px;
+  transition: transform 0.3s linear;
+  transform-origin: left;
+  z-index: -1;
+}
+
+.champion .join-btn:hover::before {
+  transform: scale(1);
+}
