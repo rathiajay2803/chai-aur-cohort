@@ -7,7 +7,7 @@ This repository contains a collection of **interactive JavaScript challenges** d
 
 ## 📂 Explore the Challenges  
 
-- [DOM Challenge 1-5](./DOM-challenge[1-5]/README.md)  
+- [DOM Challenge 1-5](./DOM-Challenges[1-5]/README.md)  
 - [DOM Challenge 6-10](./DOM-Challenges[6-10]/README.md)  
 
 ## 🚀 Try the Live Demo  
